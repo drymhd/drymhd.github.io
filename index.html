@@ -1,16 +1,451 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <p>This is my new website which is hosted on GitHub Pages!</p>
-    </main>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Best Practices -->
+  <title>Dary Mahdi | Full-Stack & Mobile Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Dary Mahdi, a passionate Full-Stack and Mobile Developer with expertise in Dart, Flutter, PHP, Laravel, Node.js, and Go. Explore work experience, skills, and certifications.">
+  <meta name="keywords" content="Dary Mahdi, Full-Stack Developer, Mobile Developer, Flutter Developer, Laravel Developer, Portfolio, CV, Web Developer Surabaya">
+  <meta name="author" content="Dary Mahdi">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress" id="progress-bar"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-logo" id="nav-logo">
+      <span>DM</span> Dary Mahdi
+    </div>
+    
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="nav-actions">
+      <button class="theme-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
+        <!-- SVG will be injected by script.js -->
+      </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-content animate-fade-in delay-1">
+        <span class="hero-subtitle">Available for Work</span>
+        <h1 class="hero-title">Hi, I'm <span class="text-gradient">Dary Mahdi</span></h1>
+        <h2 style="font-size: 1.8rem; font-weight: 600; color: var(--text-primary); margin-top: -0.5rem;">
+          Full-Stack & Mobile Developer
+        </h2>
+        <p class="hero-desc">
+          I am a passionate software developer specializing in building scalable web and mobile applications. With expertise spanning Dart, PHP, Go, and JavaScript, I craft performant digital products from concept to deployment.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary" id="btn-cta-contact">Get in Touch</a>
+          <a href="#experience" class="btn btn-secondary" id="btn-cta-exp">View My Work</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual animate-fade-in delay-3">
+        <div class="avatar-wrapper">
+          <img src="profile.png" alt="Dary Mahdi" class="avatar-image">
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator animate-fade-in delay-4">
+      <span>Scroll Down</span>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section scroll-reveal" id="about">
+    <div class="section-header">
+      <span class="section-subtitle">Biography</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    
+    <div class="glass-panel about-grid">
+      <div>
+        <p class="about-text">
+          I am a passionate software developer with a strong foundation in programming and application development. I possess extensive knowledge of programming languages such as Dart, PHP, Go, and JavaScript, and I am proficient in utilizing various frameworks and modern development tools to build high-performance systems.
+        </p>
+        
+        <div class="contact-meta">
+          <div class="meta-item">
+            <div class="meta-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="meta-info">
+              <h4>Location</h4>
+              <p>Surabaya, Indonesia</p>
+            </div>
+          </div>
+          
+          <div class="meta-item">
+            <div class="meta-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <div class="meta-info">
+              <h4>Email</h4>
+              <p><a href="mailto:darmah250903@gmail.com">darmah250903@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="meta-info">
+              <h4>Phone</h4>
+              <p><a href="tel:+6281357646859">+62 813-5764-6859</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section class="section scroll-reveal" id="experience">
+    <div class="section-header">
+      <span class="section-subtitle">My Journey</span>
+      <h2 class="section-title">Work Experience</h2>
+    </div>
+    
+    <div class="timeline">
+      <!-- Job 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <div>
+            <h3 class="company-title">PT. SAI Trans Indonesia</h3>
+            <span class="company-location">Jakarta (Remote / On-site)</span>
+          </div>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-header">
+            <h4 class="role-title">Fullstack Developer</h4>
+            <span class="role-date">Agt 2023 - Present</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Lead the design, development, and maintenance of internal applications, including the Logistics Management System (LMS), optimizing overall operational efficiency.</li>
+            <li>Developed and managed native and cross-platform mobile applications (iOS & Android) for logistics operations using Laravel, Vue, Node.js, and Flutter, enhancing functionality and user engagement.</li>
+            <li>Collaborated closely with cross-functional teams to ensure a reliable, scalable, and secure application infrastructure, resulting in a 30% reduction in operational delays.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <div>
+            <h3 class="company-title">CV. Mcflyon Teknologi Indonesia</h3>
+            <span class="company-location">Surabaya, Indonesia</span>
+          </div>
+        </div>
+        
+        <div class="role-card" style="margin-bottom: 1.5rem;">
+          <div class="role-header">
+            <h4 class="role-title">Junior Software Developer</h4>
+            <span class="role-date">Agt 2022 - Agt 2023</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Designed and maintained highly responsive, performance-optimized websites and web applications using HTML, CSS, and modern JavaScript.</li>
+            <li>Developed robust front-end and back-end features using frameworks such as Node.js, React, Vue, Flutter, and Laravel, achieving faster deployment times.</li>
+            <li>Enhanced application responsiveness and UI presentation, ensuring a positive, cohesive, and seamless user experience across devices.</li>
+          </ul>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-header">
+            <h4 class="role-title">Web Developer (Intern)</h4>
+            <span class="role-date">Jan 2021 - Jun 2021</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Assisted in the design, development, and maintenance of client-requested applications utilizing Laravel and Vue.js to meet specific user criteria.</li>
+            <li>Supported the implementation of user-centered interactive features, substantially improving overall client satisfaction and usability metrics.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section class="section scroll-reveal" id="skills">
+    <div class="section-header">
+      <span class="section-subtitle">Proficiencies</span>
+      <h2 class="section-title">Technical Skills</h2>
+    </div>
+    
+    <div class="skills-container">
+      <!-- Languages -->
+      <div class="glass-panel">
+        <h3 class="skill-category-title">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+          </svg>
+          Languages
+        </h3>
+        <div class="skill-badges">
+          <span class="skill-badge">PHP</span>
+          <span class="skill-badge">Go (Golang)</span>
+          <span class="skill-badge">Dart</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">CSS3</span>
+        </div>
+      </div>
+
+      <!-- Frameworks -->
+      <div class="glass-panel">
+        <h3 class="skill-category-title">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Frameworks
+        </h3>
+        <div class="skill-badges">
+          <span class="skill-badge">Laravel</span>
+          <span class="skill-badge">Vue.js</span>
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Flutter</span>
+          <span class="skill-badge">Quarkus</span>
+          <span class="skill-badge">Express.js</span>
+          <span class="skill-badge">GIN (Go)</span>
+        </div>
+      </div>
+
+      <!-- Technologies & Soft Skills -->
+      <div class="glass-panel">
+        <h3 class="skill-category-title">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          Competencies & Soft Skills
+        </h3>
+        <div class="skill-badges">
+          <span class="skill-badge">Rest API</span>
+          <span class="skill-badge">Database Design</span>
+          <span class="skill-badge">Problem Solving</span>
+          <span class="skill-badge">Team Collaboration</span>
+          <span class="skill-badge">Attention to Detail</span>
+          <span class="skill-badge">Adaptability</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications Section -->
+  <section class="section scroll-reveal" id="education">
+    <div class="section-header">
+      <span class="section-subtitle">Credentials</span>
+      <h2 class="section-title">Education & Certifications</h2>
+    </div>
+    
+    <div class="edu-cert-grid">
+      <!-- Education -->
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: var(--accent-primary);">
+            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+          </svg>
+          Education
+        </h2>
+        <div class="education-list">
+          <!-- UICI -->
+          <div class="edu-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Universitas Insan Cita Indonesia</h3>
+              <p class="card-subtitle">Bachelor's in Informatics (SEMESTA Scholarship)</p>
+              <div class="card-meta">
+                <span>GPA: 3.67 / 4.00</span>
+                <span>Agt 2022 - Apr 2026 (7 Semesters)</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- SMKN 2 -->
+          <div class="edu-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>SMKN 2 Surabaya</h3>
+              <p class="card-subtitle">Software Engineering (Rekayasa Perangkat Lunak)</p>
+              <div class="card-meta">
+                <span>2019 - 2022</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages sub-panel -->
+        <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: var(--accent-primary);">
+            <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+          </svg>
+          Languages
+        </h2>
+        <div class="education-list">
+          <div class="edu-card">
+            <div class="card-body" style="padding: 0.5rem 0;">
+              <h3 style="font-size: 1.05rem;">Bahasa Indonesia</h3>
+              <p class="card-subtitle" style="margin-bottom: 0.2rem;">Native Speaker</p>
+              <h3 style="font-size: 1.05rem; margin-top: 1rem;">English</h3>
+              <p class="card-subtitle" style="margin-bottom: 0;">Intermediate Proficiency (Professional Communication & Writing)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: var(--accent-primary);">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+          Certifications
+        </h2>
+        <div class="certification-list">
+          <!-- BNSP -->
+          <div class="cert-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Junior Web Developer</h3>
+              <p class="card-subtitle">BNSP (National Agency for Professional Certification)</p>
+              <div class="card-meta">
+                <span>Valid: 2023 - 2026</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- HackerRank Rest API -->
+          <div class="cert-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Rest API (Intermediate)</h3>
+              <p class="card-subtitle">HackerRank</p>
+              <div class="card-meta">
+                <span>Issued: 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HackerRank SQL -->
+          <div class="cert-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>SQL (Intermediate)</h3>
+              <p class="card-subtitle">HackerRank</p>
+              <div class="card-meta">
+                <span>Issued: 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <h2>Let's Work Together</h2>
+      <p style="color: var(--text-secondary); max-width: 500px; font-size: 1.05rem;">
+        If you have a project or position that fits my experience in Full-Stack web development or Mobile App engineering, feel free to reach out.
+      </p>
+      
+      <div class="social-links">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/darymahdi" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/drymhd" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+          </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6281357646859" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.72 13c-.24.69-1.25 1.26-1.74 1.33-.49.07-1.13.09-3.23-.77-2.68-1.1-4.41-3.82-4.54-4-.14-.18-1.08-1.44-1.08-2.75 0-1.31.68-1.96.93-2.22.24-.26.54-.33.72-.33.18 0 .36 0 .51.01.16.01.37-.06.58.45.22.53.76 1.85.83 1.99.07.14.12.31.02.51-.1.2-.15.31-.3.49-.15.18-.32.41-.45.55-.15.15-.31.32-.13.62.18.3.8 1.31 1.71 2.12.92.83 1.7 1.09 2.01 1.22.31.13.49.11.67-.09.18-.2.78-.9 1-1.21.21-.31.43-.26.72-.15.29.11 1.86.88 2.18 1.04.32.16.54.24.61.37.08.13.08.76-.16 1.45z"/>
+          </svg>
+        </a>
+
+        <!-- Mail -->
+        <a href="mailto:darmah250903@gmail.com" class="social-icon" aria-label="Send Email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="copyright">
+        &copy; <span id="year">2026</span> Dary Mahdi. Built with native HTML &amp; CSS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    // Dynamically update the footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
